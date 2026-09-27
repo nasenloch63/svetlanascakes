@@ -1,0 +1,24 @@
+{
+  "name": "svetlana-cakes-cafe",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "lint": "eslint .",
+    "test": "node --test tests/*.test.js"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@eslint/js": "^9.39.0",
+    "@fontsource-variable/manrope": "^5.3.0",
+    "@fontsource/cormorant-garamond": "^5.3.0",
+    "@playwright/test": "^1.63.0",
+    "eslint": "^9.39.0",
+    "globals": "^16.5.0",
+    "sharp": "^0.35.4",
+    "vite": "^7.1.7"
+  }
+}
