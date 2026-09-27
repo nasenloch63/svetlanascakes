@@ -1,5 +1,6 @@
 export const translations = {
   en: {
+    heroWhatsapp: 'Say hello on WhatsApp',
     designCredit: 'Design by',
     skip: 'Skip to content', navigation: 'Main navigation', language: 'Language', openNav: 'Open menu', closeNav: 'Close menu',
     navAbout: 'Our café', navSpecialties: 'Specialties', navMenu: 'Menu', navGallery: 'Gallery', navContact: 'Contact',
