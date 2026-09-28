@@ -210,6 +210,57 @@ footer { border-top: 1px solid var(--line); }
   .specialty-card:hover img, .gallery-photo:hover img, .menu-image-button:hover img { transform: none; }
 }
 
+/* Keep the desktop hero balanced without changing the mobile composition. */
+@media (min-width: 1200px) {
+  .hero {
+    width: 100%;
+    max-width: 1440px;
+    min-height: 0;
+    margin-inline: auto;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+    grid-template-areas: 'visual copy';
+    align-items: stretch;
+    overflow: visible;
+  }
+
+  .hero-visual {
+    grid-area: visual;
+    width: calc(100% - 26px);
+    max-width: 100%;
+    min-width: 0;
+    min-height: 0;
+    aspect-ratio: 946 / 684;
+    height: auto;
+    justify-self: start;
+    margin: 26px 0 26px 26px;
+  }
+
+  .hero-copy {
+    grid-area: copy;
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    padding: 82px clamp(32px, 5vw, 72px) 50px clamp(32px, 5vw, 72px);
+  }
+
+  .hero h1,
+  .hero h1 span,
+  .hero h1 em,
+  .hero-description {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
 /* Keep the page flow predictable while preserving the existing sections. */
 main {
   display: flex;
@@ -226,6 +277,11 @@ main > #menu { order: 6; }
 main > #location { order: 7; }
 main > #contact { order: 8; }
 main > .social-section { order: 9; }
+
+@media (min-width: 1200px) {
+  .hero h1 { max-width: none !important; }
+  .hero-description { max-width: none !important; }
+}
 
 .section-heading,
 .about,
